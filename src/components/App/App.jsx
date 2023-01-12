@@ -25,12 +25,11 @@ export class App extends Component {
     if (contacts.find(contact => contact.name === object.name)) {
       return alert(`${object.name} is already in contact`);
     }
-    {
-      this.setState(prevState => ({
-        contacts: [object, ...prevState.contacts],
-      }));
-      console.log(contacts);
-    }
+
+    this.setState(prevState => ({
+      contacts: [object, ...prevState.contacts],
+    }));
+    console.log(contacts);
   };
 
   changeFilter = e => {
